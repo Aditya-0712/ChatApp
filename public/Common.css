@@ -1,0 +1,144 @@
+body 
+{
+    display: flex;
+    width:100%;
+    height: auto;
+    margin:0;
+    font-size: 0;
+    background-color:#D7FBE8;
+}
+
+.main 
+{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    height:auto;
+    margin:30% auto 0px auto;
+}
+
+.title , .desc
+{
+    display: flex;
+    width:auto;
+    height:auto;
+    font-size: 40px;
+    font-family:coco;
+    color:#1FAB89;
+    margin:0px auto 0px 5px;
+}
+
+.desc 
+{
+    font-size: 17px;
+    margin:5px auto 0px 10px;
+    color:black;
+}
+
+form 
+{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    height:auto;
+    margin:10px 0px 0px 0px;
+}
+
+form p 
+{
+    display: flex;
+    width:auto;
+    height:auto;
+    font-size: 25px;
+    font-family:lnk;
+    color:#1FAB89;
+    margin:0px auto 0px 0px;
+}
+
+.div1 
+{
+    margin:10px 0px 0px 0px;
+    background-color:#9DF3C4;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inp 
+{
+    display:flex;
+    width: fit-content;
+    height:auto;
+    margin:10px 0px 0px 0px;
+}
+
+.inp svg 
+{
+    display:flex;
+    width:30px;
+    height:30px;
+    fill:#393646;
+    margin:0px 20px 0px 0px;
+}
+
+input[type="text"] , input[type="password"]
+{
+    background:none;
+    width:250px;
+    font-family:sans-serif;
+    color:black;
+    height:25px;
+    border:none;
+    font-size: 20px;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+input[type="submit"]
+{
+    display: flex;
+    width:auto;
+    height:auto;
+    margin:25px auto 0px auto;
+    font-size:30px;
+    font-family: lnk;
+    background-color:#DDFFBB;
+    color:#393646;
+    border:none;
+    border-radius: 5px;
+    padding:5px 10px 5px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.warnemail , .warnpass , .warnuser
+{
+    width:auto;
+    height:auto;
+    margin:10px auto 0px 5px;
+    font-size: 15px;
+    font-family: coco;
+    color:red;
+}
+
+.finale 
+{
+    display:flex;
+    width:auto;
+    height:auto;
+    margin:30px auto 100px auto;
+    font-size:15px;
+    font-family: coco;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width:900px)
+{
+    .main 
+    {
+        margin:50px auto 0px auto; 
+    }
+}

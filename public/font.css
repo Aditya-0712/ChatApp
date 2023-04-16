@@ -1,0 +1,17 @@
+@font-face 
+{
+    font-family:bebas ;
+    src: url(BebasNeue-Regular.ttf);
+}
+
+@font-face 
+{
+    font-family:coco ;
+    src: url(coco.ttf);
+}
+
+@font-face 
+{
+    font-family:lnk ;
+    src: url(DisposableDroidBB.ttf);
+}

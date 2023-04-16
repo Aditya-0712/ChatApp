@@ -1,0 +1,121 @@
+body
+{
+    width:100%;
+    height:auto;
+    margin:0;
+    font-size:0;
+    background-color: #D7FBE8;
+}
+
+.topbar
+{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+    font-size:40px;
+    font-family: bebas;
+    color:#1FAB89;
+    background-color:black;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 3px;
+    position: fixed;
+    z-index: 1;
+}
+
+form 
+{
+    display:flex;
+    margin:0;
+    width: 100%;
+    height:auto;
+    position: fixed;
+    bottom: 0;
+}
+
+input[type="text"]
+{
+    display:flex;
+    width:250px;
+    height:30px;
+    margin:10px 5px 10px auto;
+    background-color: #9DF3C4;
+    color:black;
+    font-family: coco;
+    font-size:17px;
+    border-radius: 50px;
+    border:1px solid black;
+    padding-left: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="text"]:focus
+{
+    outline: none;
+}
+
+input[type="submit"]
+{
+    display:flex;
+    width:auto;
+    height:30px;
+    margin:auto auto auto 10px;
+    font-family: coco;
+    color:#9DF3C4;
+    background-color: black;
+    cursor: pointer;
+    border-radius:5px;
+    border:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.chatbox 
+{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding-top: 60px;
+    width:100%;
+    height:auto;
+    margin-bottom: 100px;
+}
+
+.texts
+{
+    display: flex;
+    flex-direction: column;
+    margin:5px auto 5px 10px;
+    width:auto;
+    height:auto;
+    background-color:#212121;
+    border-radius: 50px 50px 50px 0px;
+    padding: 5px 10px 5px 10px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.texts p:nth-child(1) , .texts p:nth-child(2)
+{
+    display:flex;
+    margin:0;
+    font-size:20px;
+    font-family: coco;
+    color:#9DF3C4;
+}
+
+.texts p:nth-child(1)
+{
+    font-size: 15px;
+    color:blueviolet;
+    margin-left:5px;
+    margin-right: 5px;
+}
+
+@media screen and (min-width:800px) 
+{
+    input[type="text"]
+    {
+        width:500px;
+    }
+}
