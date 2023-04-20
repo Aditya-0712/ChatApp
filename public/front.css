@@ -1,0 +1,91 @@
+*{text-decoration: none;}
+
+body 
+{
+    background-color:#D7FBE8;
+    margin:0;
+    font-size:0;
+    width:100%;
+    height:auto;
+}
+
+.topbar 
+{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+    font-size: 40px;
+    font-family: coco;
+    background-color: black;
+    color:#1FAB89;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.add svg 
+{
+    display:flex;
+    width:30px;
+    height: auto;
+    position: fixed;
+    right:0;
+    bottom:0;
+    margin:0px 10px 10px 0px;
+    z-index: 1;
+    background-color: #62D2A2;
+    fill: black;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.list , form
+{
+    display:flex;
+    width:100%;
+    height:auto;
+    margin:0;
+    background-color:#9DF3C4;
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+form 
+{
+    flex-direction: column;
+}
+
+.list svg 
+{
+    display: flex;
+    width:30px;
+    height:auto;
+    margin:auto 30px auto 30px;
+    fill:coral;
+}
+
+.list p
+{
+    display: flex;
+    width: auto;
+    height:auto;
+    font-size: 25px;
+    font-family: coco;
+    color:black;
+    margin:auto auto auto 0px;
+    padding:10px 0px 10px 0px;
+}
+
+.blanck
+{
+    display: block;
+    margin:0;
+    width:100%;
+    height:54px;
+    background-color: #1FAB89;
+}

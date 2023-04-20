@@ -1,0 +1,48 @@
+body
+{
+    display: flex;
+    margin:0;
+    width:100%;
+    height:auto;
+    background-color: #1FAB89;
+    font-size: 0;
+}
+
+form 
+{
+    display:flex;
+    flex-direction: column;
+    margin:200px auto 0px auto;
+}
+
+input[type="text"]
+{
+    display: flex;
+    width:300px;
+    height:40px;
+    background-color: #62D2A2;
+    color:black;
+    font-family:coco ;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="text"]:focus
+{
+    outline: none;
+}
+
+input[type="submit"]
+{
+    width:100px;
+    height:auto;
+    padding:5px;
+    background-color: black;
+    color:#D7FBE8;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:30px auto 0px auto;
+}
