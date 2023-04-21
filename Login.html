@@ -44,5 +44,26 @@
         </div>
 
         <script src="/common.js"></script>
+        <script>
+            document.forms["myform"]["username"].onfocus = function()
+            {
+                document.getElementsByClassName("div1")[0].style.boxShadow = "0 0 0 2px coral, 8px 8px 0 0 coral";
+            }
+
+            document.forms["myform"]["username"].onblur = function()
+            {
+                document.getElementsByClassName("div1")[0].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+            }
+
+            document.forms["myform"]["password"].onfocus = function()
+            {
+                document.getElementsByClassName("div1")[1].style.boxShadow = "0 0 0 2px coral, 8px 8px 0 0 coral";
+            }
+
+            document.forms["myform"]["password"].onblur = function()
+            {
+                document.getElementsByClassName("div1")[1].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+            }
+        </script>
     </body>
 </html>

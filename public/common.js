@@ -16,25 +16,3 @@ eye.onclick = function()
         pass.type = "password";
     }
 }
-
-var user = document.forms["myform"]["username"];
-
-user.onfocus = function()
-{
-    document.getElementsByClassName("div1")[0].style.boxShadow = "0 0 0 2px coral, 8px 8px 0 0 coral";
-}
-
-user.onblur = function()
-{
-    document.getElementsByClassName("div1")[0].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-}
-
-pass.onfocus = function()
-{
-    document.getElementsByClassName("div1")[1].style.boxShadow = "0 0 0 2px coral, 8px 8px 0 0 coral";
-}
-
-pass.onblur = function()
-{
-    document.getElementsByClassName("div1")[1].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-}
