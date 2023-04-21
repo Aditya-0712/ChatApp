@@ -21,7 +21,7 @@ passcheck.is().min(8).is().max(100).has().not().spaces();
 app.use(BP.urlencoded({extended:true}));
 app.use(exp.static(path.join(__dirname + "/public")));
 
-mongoose.connect("mongodb://127.0.0.1:27017/Messenger", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://AdityaBatgeri:Kiq2w2Ak7CR9bYgb@cluster0.d42f6ow.mongodb.net/Messenger?retryWrites=true&w=majority", {useNewUrlParser:true});
 
 const struc1 = new mongoose.Schema({
     USERNAME:String,
@@ -69,7 +69,7 @@ app.post("/Signup.html/" , function(req,res)
             USERNAME:inp_name,
             EMAIL:inp_email,
             PASSWORD:inp_pass,
-            FRIENDS:["Admin"]
+            FRIENDS:[]
         })
         upload.save();
         res.redirect("/front.html");
@@ -129,26 +129,26 @@ app.post("/" , function(req,res)
     res.send($.html());
 })
 
-app.get("/index.html" , async function(req,res)
-{
-    $(".chatbox").html('');
-    const cur = Record.find({chatter1:inp_name , chatter2:""}).cursor();
-    let obj2 = await cur.next();
-    for (let i=0 ; i<obj2.CHATS.length ; i++)
-    {
-        console.log(obj2.CHATS[i].chatter + ": " + obj2.CHATS[i].mEsSeGe);
-        if (obj2.CHATS[i].chatter == inp_name)
-        {
-            $(".chatbox").append('<div class="texts" style="margin:5px 10px 5px auto; background-color: coral; border-radius: 50px 50px 0px 50px;"><p style="color:white">'+ obj2.CHATS[i].chatter +'</p><p style="color:black">'+ obj2.CHATS[i].mEsSeGe +'</p></div>');
-        }
-        else 
-        {
-            $(".chatbox").append('<div class="texts"><p>'+ obj2.CHATS[i].chatter +'</p><p>'+ obj2.CHATS[i].mEsSeGe +'</p></div>');
-        }
-    }
+// app.get("/index.html" , async function(req,res)
+// {
+//     $(".chatbox").html('');
+//     const cur = Record.find({chatter1:inp_name , chatter2:""}).cursor();
+//     let obj2 = await cur.next();
+//     for (let i=0 ; i<obj2.CHATS.length ; i++)
+//     {
+//         console.log(obj2.CHATS[i].chatter + ": " + obj2.CHATS[i].mEsSeGe);
+//         if (obj2.CHATS[i].chatter == inp_name)
+//         {
+//             $(".chatbox").append('<div class="texts" style="margin:5px 10px 5px auto; background-color: coral; border-radius: 50px 50px 0px 50px;"><p style="color:white">'+ obj2.CHATS[i].chatter +'</p><p style="color:black">'+ obj2.CHATS[i].mEsSeGe +'</p></div>');
+//         }
+//         else 
+//         {
+//             $(".chatbox").append('<div class="texts"><p>'+ obj2.CHATS[i].chatter +'</p><p>'+ obj2.CHATS[i].mEsSeGe +'</p></div>');
+//         }
+//     }
 
-    res.send($.html());
-})
+//     res.send($.html());
+// })
 
 app.get("/front.html" , async function(req,res)
 {
@@ -194,7 +194,7 @@ app.post("/find.html/" , async function(req,res)
         })
         upload1.save();
         upload2.save();
-        res.redirect("/front.html");
+        res.redirect("/temp");
     }
     else 
     {
@@ -202,9 +202,14 @@ app.post("/find.html/" , async function(req,res)
     }
 })
 
+app.get("/temp" , function(req,res)
+{
+    res.redirect("/front.html");
+})
+
 app.post("/new/" , async function(req,res)
 {
-    $(".chatbox").html('<div class="texts"><p style="color:red">Admin</p><p>Welcome!!</p></div><div class="texts"><p style="color:red">Admin</p><p>Happy Chatting...</p></div>');
+    $(".chatbox").html('');
 
     ch2 = req.body.chatterTwo;
     const cur2 = Record.find({chatter1:inp_name , chatter2:req.body.chatterTwo}).cursor();

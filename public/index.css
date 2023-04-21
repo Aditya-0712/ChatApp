@@ -9,19 +9,42 @@ body
 
 .topbar
 {
-    display:block;
+    display:flex;
     width:100%;
     height:auto;
     margin:0;
-    font-size:40px;
-    font-family: bebas;
-    color:#1FAB89;
     background-color:black;
-    text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top: 3px;
     position: fixed;
     z-index: 1;
+}
+
+.topbar a
+{
+    display:flex;
+    width:30px;
+    height:auto;
+    margin:auto 0px auto 20px;
+    fill:coral;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.topbar a:hover
+{
+    background-color:#212121;
+}
+
+.topbar p 
+{
+    display:flex;
+    font-size:40px;
+    font-family: bebas;
+    color:#1FAB89;
+    width:auto;
+    height: auto;
+    margin:auto;
 }
 
 form 
